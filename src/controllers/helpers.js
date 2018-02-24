@@ -129,12 +129,13 @@ helpers.buildCategoryBreadcrumbs = function (cid, callback) {
 			return callback(err);
 		}
 
-		if (meta.config.homePageRoute && meta.config.homePageRoute !== 'categories') {
+		//隐藏“板块”导航
+/* 		if (meta.config.homePageRoute && meta.config.homePageRoute !== 'categories') {
 			breadcrumbs.unshift({
 				text: '[[global:header.categories]]',
 				url: nconf.get('relative_path') + '/categories',
 			});
-		}
+		} */
 
 		breadcrumbs.unshift({
 			text: '[[global:home]]',
